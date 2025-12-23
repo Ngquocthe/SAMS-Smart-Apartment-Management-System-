@@ -1,0 +1,28 @@
+# App settings với secrets
+SAMS-BE/SAMS-BE/SAMS-BE/appsettings.json
+SAMS-BE/SAMS-BE/SAMS-BE/appsettings.Production.json
+
+# Giữ lại file example
+!SAMS-BE/SAMS-BE/SAMS-BE/appsettings.example.json
+
+# Node modules
+node_modules/
+SAMS-Fontend/node_modules/
+
+# Build outputs
+SAMS-Fontend/build/
+SAMS-BE/SAMS-BE/SAMS-BE/bin/
+SAMS-BE/SAMS-BE/SAMS-BE/obj/
+SAMS-BE/SAMS-BE/SAMS-BETests/bin/
+SAMS-BE/SAMS-BE/SAMS-BETests/obj/
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# Test results
+SAMS-BE/SAMS-BE/SAMS-BETests/TestResults/
+SAMS-BE/SAMS-BE/TestResults/

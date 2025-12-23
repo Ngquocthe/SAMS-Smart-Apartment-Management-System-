@@ -1,0 +1,72 @@
+name: CI/CD Frontend
+
+on:
+  push:
+    branches: [develop] # nếu deploy từ branch khác thì đổi ở đây
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+        # Nếu repo của bạn chưa có package-lock.json thì đổi thành:
+        # run: npm install
+
+      - name: Build
+        env:
+          CI: false
+        run: npm run build
+        # Nếu project bạn build ra thư mục khác (vd: dist), lát nữa chỉ cần đổi "build" thành "dist" bên dưới
+
+      # 🧹 Dọn thư mục tmp trên server
+      - name: Cleanup tmp folder on server
+        uses: appleboy/ssh-action@v1.2.4
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USER }}
+          key: ${{ secrets.DO_SSH_KEY }}
+          script: |
+            rm -rf /var/www/frontend-app/tmp/*
+            mkdir -p /var/www/frontend-app/tmp
+
+      # 📦 Copy thư mục build lên server (vào tmp)
+      - name: Copy build folder to server
+        uses: appleboy/scp-action@v0.1.5
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USER }}
+          key: ${{ secrets.DO_SSH_KEY }}
+          source: "build"
+          target: "/var/www/frontend-app/tmp"
+          strip_components: 1
+          # Nếu build ra thư mục dist: source: "dist"
+
+      # 🚀 Deploy: thay current, restart frontend service
+      - name: Deploy and restart frontend service
+        uses: appleboy/ssh-action@v1.2.4
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USER }}
+          key: ${{ secrets.DO_SSH_KEY }}
+          script: |
+            echo "Stopping frontend.service..."
+            sudo systemctl stop frontend.service || true
+
+            echo "Replacing current frontend build..."
+            rm -rf /var/www/frontend-app/current/*
+            cp -r /var/www/frontend-app/tmp/* /var/www/frontend-app/current/
+
+            echo "Starting frontend.service..."
+            sudo systemctl start frontend.service
+            sudo systemctl status frontend.service --no-pager --full

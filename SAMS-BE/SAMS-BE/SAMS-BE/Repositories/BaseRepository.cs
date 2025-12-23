@@ -1,0 +1,1 @@
+namespace SAMS.Repositories { public class BaseRepository { } }

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAMS-BE", "SAMS-BE\SAMS-BE.csproj", "{AF5799D8-6C0E-4FED-9DC3-345B22F29CA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAMS-BETests", "SAMS-BETests\SAMS-BETests.csproj", "{9B99BD88-CCD8-48ED-9AE3-025E60A0569D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF5799D8-6C0E-4FED-9DC3-345B22F29CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5799D8-6C0E-4FED-9DC3-345B22F29CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5799D8-6C0E-4FED-9DC3-345B22F29CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5799D8-6C0E-4FED-9DC3-345B22F29CA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B99BD88-CCD8-48ED-9AE3-025E60A0569D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B99BD88-CCD8-48ED-9AE3-025E60A0569D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B99BD88-CCD8-48ED-9AE3-025E60A0569D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B99BD88-CCD8-48ED-9AE3-025E60A0569D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7488DE3F-CFF6-429B-928A-68EF8BDF16AA}
+	EndGlobalSection
+EndGlobal

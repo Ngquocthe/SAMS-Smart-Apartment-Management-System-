@@ -1,0 +1,548 @@
+/* Header and Back button - using react-bootstrap default styles */
+
+/* Filter card styles */
+.filter-card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+.custom-select {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+}
+
+.custom-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Card hover effects */
+.hover-shadow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+  border: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.hover-shadow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 1rem 2rem rgba(102, 126, 234, 0.2) !important;
+  transform: translateY(-5px);
+}
+
+.hover-shadow:hover::before {
+  opacity: 1;
+}
+
+/* ✨ MODERN AMENITY CARD DESIGN ✨ */
+.amenity-card-modern {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  /* Nền nhẹ nhàng, gần gũi với chủ đề quản lý chung cư */
+  background: linear-gradient(135deg, #f7f9fc 0%, #ecf5ff 100%);
+  /* xanh lam nhạt tinh khiết */
+  /* Viền đậm nhẹ để nổi bật card trên nền trắng */
+  border: 1.5px solid #c8d4ee;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12), 0 0 0 3px rgba(102, 126, 234, 0.06);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Tái cân bằng màu chữ cho nền sáng tinh gọn */
+.amenity-card-modern .amenity-title {
+  color: #1a202c;
+}
+
+.amenity-card-modern .amenity-location {
+  color: #4a5568;
+}
+
+.amenity-card-modern .detail-label {
+  color: #4a5568;
+}
+
+.amenity-card-modern .detail-value {
+  color: #2d3748;
+}
+
+.amenity-card-modern .amenity-details {
+  background: rgba(102, 126, 234, 0.06);
+}
+
+/* Tăng kích cỡ chữ khu vực thông tin chi tiết */
+.amenity-card-modern .detail-item {
+  font-size: 14.5px;
+}
+
+.amenity-card-modern .detail-item i {
+  font-size: 16px;
+}
+
+.amenity-card-modern .detail-label {
+  font-weight: 600;
+}
+
+.amenity-card-modern .detail-value {
+  font-weight: 700;
+  font-size: 15.5px;
+}
+
+/* Nổi bật viền khi hover để người dùng nhận diện card rõ hơn */
+.amenity-card-modern:hover {
+  border-color: #8aa1e6;
+}
+
+.card-body-flex {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.amenity-card-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.amenity-card-modern:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3), 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.amenity-card-modern:hover::before {
+  opacity: 1;
+}
+
+/* Badge Styles */
+.card-badge-wrapper {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.fee-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: slideInRight 0.5s ease;
+}
+
+.fee-badge.free {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.fee-badge.paid {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.maintenance-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Amenity Header */
+.amenity-header {
+  padding-top: 8px;
+}
+
+.amenity-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 4px !important;
+  line-height: 1.3;
+}
+
+.amenity-location {
+  font-size: 12px;
+  color: #718096;
+  margin-bottom: 0 !important;
+}
+
+/* Amenity Details */
+.amenity-details {
+  background: rgba(102, 126, 234, 0.03);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 12px 0;
+  flex-grow: 1;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  font-size: 12px;
+}
+
+.detail-item i {
+  font-size: 13px;
+}
+
+.detail-label {
+  color: #718096;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  margin-left: auto;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.maintenance-alert {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px dashed rgba(249, 115, 22, 0.7);
+  background: rgba(249, 115, 22, 0.08);
+  color: #b45309;
+}
+
+.maintenance-alert i {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.maintenance-label {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.maintenance-time {
+  font-size: 12px;
+  color: #a16207;
+}
+
+/* 🚀 MODERN BOOKING BUTTON WITH GRADIENT & GLOW */
+.booking-button {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.booking-button:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  letter-spacing: 0.5px;
+}
+
+.booking-button:active {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.booking-button:disabled,
+.booking-button.disabled {
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #cbd5f5 0%, #94a3b8 100%);
+  box-shadow: none;
+  color: #1f2937;
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card animation on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Badge animations */
+.badge {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Empty state */
+.empty-state {
+  border: 2px dashed #dee2e6;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px;
+}
+
+.empty-icon i {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+/* Button hover effects */
+.btn-primary,
+.btn-success {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before,
+.btn-success::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before,
+.btn-success:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Input group focus */
+.input-group:focus-within .input-group-text {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+/* Pagination - using react-bootstrap default styles */
+
+/* Card body padding animation */
+.card {
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading spinner custom color */
+.spinner-border {
+  color: #667eea;
+}
+
+/* QR Payment Modal Styles */
+.qr-container {
+  display: inline-block;
+  border: 3px solid #667eea;
+  border-radius: 12px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  transition: all 0.3s ease;
+}
+
+.qr-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.25);
+}
+
+.qr-container img {
+  border-radius: 8px;
+  display: block;
+}
+
+/* Payment status badges */
+.badge.bg-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+  color: white;
+  box-shadow: 0 4px 12px rgba(17, 153, 142, 0.3);
+}
+
+.badge.bg-warning {
+  background: linear-gradient(135deg, #f7b733 0%, #fc4a1a 100%) !important;
+  color: white;
+  box-shadow: 0 4px 12px rgba(247, 183, 51, 0.3);
+}
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%) !important;
+  color: white;
+  box-shadow: 0 4px 12px rgba(252, 74, 26, 0.3);
+}
+
+/* Modal countdown timer */
+.countdown-timer {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Payment info card */
+.payment-info-card {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.payment-info-card:hover {
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+/* QR Payment Modal animations */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.qr-payment-modal .modal-content {
+  animation: fadeInScale 0.3s ease;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Status indicator pulse animation */
+@keyframes statusPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.badge.bg-warning {
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+/* Security indicator styles */
+.security-indicator {
+  color: #667eea;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}

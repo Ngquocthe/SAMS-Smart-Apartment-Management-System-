@@ -1,0 +1,31 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+Debug/
+Release/
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Other
+*.dbmdl
+*.log
+*.tlog
+*.cache
+*.pdb
+*.mdb
+*.opendb
+
+SAMS-BE/TestResults
+SAMS-BE/SAMS_BETests/CoverageReport
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="edccc5f4-b5fd-4d13-a969-49e50d15c9bc" name="Changes" comment="feat: add admin global when login">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL create schema/BuildingManagement.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL create schema/BuildingManagement.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keycloak.conf" beforeDir="false" afterPath="$PROJECT_DIR$/keycloak.conf" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kayoko2003&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kayoko2003/Development.git&quot;,
+    &quot;accountId&quot;: &quot;28468ed4-1c50-4e9d-b4d4-6b3ba2b46610&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="33pcBLnXYw9ldez7IskQgiEEThZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.axon-keycloak-extensions [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.axon-keycloak-extensions [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-auth-building-selector [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-auth-building-selector [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-auth-db-guard [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-auth-db-guard [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-auth-db-guard [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-protocol-mapper-building [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-protocol-mapper-building [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-protocol-mapper-building [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-rest-building-list [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spi-rest-building-list [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Đồ án/Development/docker-compose/providers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Đồ án\Development\docker-compose\providers" />
+      <recent name="D:\Đồ án\Development\docker-compose\themes" />
+      <recent name="D:\Đồ án\Development\docker-compose" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Đồ án\Development\docker-compose\import" />
+      <recent name="D:\Đồ án\Development\docker-compose\themes" />
+      <recent name="D:\Đồ án\Development\docker-compose\providers" />
+      <recent name="D:\Đồ án\Development\docker-compose\theme" />
+      <recent name="D:\Đồ án\Development\spi-auth-db-guard\src\main\resources\META-INF" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="edccc5f4-b5fd-4d13-a969-49e50d15c9bc" name="Changes" comment="" />
+      <created>1760017321505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760017321505</updated>
+      <workItem from="1760017322822" duration="6152000" />
+      <workItem from="1760079282294" duration="3043000" />
+      <workItem from="1760083798305" duration="2308000" />
+      <workItem from="1760563795985" duration="3376000" />
+      <workItem from="1760600025892" duration="6524000" />
+      <workItem from="1760623788308" duration="1322000" />
+      <workItem from="1760625126644" duration="3223000" />
+      <workItem from="1760750683512" duration="10137000" />
+      <workItem from="1761161551083" duration="3320000" />
+      <workItem from="1761206044306" duration="3787000" />
+      <workItem from="1761313442443" duration="2362000" />
+      <workItem from="1761319658166" duration="11000" />
+      <workItem from="1761319688882" duration="1024000" />
+      <workItem from="1762044991999" duration="1332000" />
+      <workItem from="1762046351912" duration="4065000" />
+      <workItem from="1762117482610" duration="1444000" />
+      <workItem from="1762180285592" duration="111000" />
+      <workItem from="1762394302191" duration="804000" />
+      <workItem from="1762431250420" duration="3312000" />
+      <workItem from="1762573159228" duration="1413000" />
+      <workItem from="1764380267079" duration="6441000" />
+      <workItem from="1764734080523" duration="1584000" />
+      <workItem from="1764994709665" duration="754000" />
+      <workItem from="1765141348997" duration="625000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add admin global when login" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add admin global when login" />
+  </component>
+</project>

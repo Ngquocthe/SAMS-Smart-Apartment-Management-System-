@@ -1,0 +1,438 @@
+/* HomepageTailwind - Chỉ giữ lại animations và effects phức tạp */
+
+/* Background Animation */
+.grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+.particle {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    opacity: 0.7;
+  }
+  50% { 
+    transform: translateY(-20px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+.flow-line {
+  animation: dataFlow 4s linear infinite;
+}
+
+@keyframes dataFlow {
+  0% { 
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Hero Text Animations */
+.hero-text {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s ease-out;
+}
+
+.hero-text.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.title-line {
+  animation: slideInUp 1s ease-out;
+}
+
+.title-line:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.highlight {
+  background: linear-gradient(45deg, #60a5fa, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.stat-number {
+  animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* CTA Button Effects */
+.cta-btn.primary {
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn.primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-btn.primary:hover::before {
+  left: 100%;
+}
+
+.cta-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  color: #e2e8f0;
+  border: 2px solid #475569;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn.secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #475569;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.cta-btn.secondary:hover::before {
+  left: 0;
+}
+
+.cta-btn.secondary:hover {
+  transform: translateY(-3px);
+}
+
+/* Hero Visual Animations */
+.hero-visual {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 1s ease-out;
+}
+
+.hero-visual.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.building {
+  animation: buildingFloat 6s ease-in-out infinite;
+}
+
+.building-1 {
+  width: 80px;
+  height: 300px;
+  animation-delay: 0s;
+}
+
+.building-2 {
+  width: 100px;
+  height: 400px;
+  animation-delay: 1s;
+}
+
+.building-3 {
+  width: 90px;
+  height: 350px;
+  animation-delay: 2s;
+}
+
+@keyframes buildingFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.window {
+  background: #0f172a;
+  transition: all 0.3s ease;
+}
+
+.window.active {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  animation: windowGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes windowGlow {
+  from { box-shadow: 0 0 5px rgba(251, 191, 36, 0.5); }
+  to { box-shadow: 0 0 15px rgba(251, 191, 36, 0.8); }
+}
+
+.floating-icon {
+  animation: floatAround 8s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-icon:nth-child(2) {
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.floating-icon:nth-child(3) {
+  top: 40%;
+  left: 5%;
+  animation-delay: 4s;
+}
+
+.floating-icon:nth-child(4) {
+  top: 70%;
+  right: 5%;
+  animation-delay: 6s;
+}
+
+@keyframes floatAround {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% { 
+    transform: translateY(-20px) rotate(90deg);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(-10px) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% { 
+    transform: translateY(-30px) rotate(270deg);
+    opacity: 1;
+  }
+}
+
+/* Feature Card Effects */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+}
+
+.feature-icon {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* About Section Background Effects */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="aboutGrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(59, 130, 246, 0.2)" stroke-width="0.8"/></pattern></defs><rect width="100" height="100" fill="url(%23aboutGrid)"/></svg>'),
+    linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.05) 50%, transparent 70%);
+  opacity: 0.6;
+  animation: backgroundShift 8s ease-in-out infinite;
+}
+
+.about-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(139, 92, 246, 0.1) 25%, rgba(59, 130, 246, 0.1) 75%, transparent 100%);
+  animation: backgroundFlow 12s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(10px) translateY(-5px); }
+}
+
+@keyframes backgroundFlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.building-tower {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.ai-icon, .data-flow, .cloud-icon {
+  animation: orbit 4s linear infinite;
+}
+
+.ai-icon {
+  animation-delay: 0s;
+}
+
+.data-flow {
+  animation-delay: 1.3s;
+}
+
+.cloud-icon {
+  animation-delay: 2.6s;
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+/* Why Choose Card Effects */
+.why-choose-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Technology Card Effects */
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.tech-card:hover::before {
+  left: 100%;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+/* Technology Section Background */
+.technology-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="techGrid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M 25 0 L 0 0 0 25" fill="none" stroke="rgba(139, 92, 246, 0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23techGrid)"/></svg>');
+  opacity: 0.3;
+}
+
+/* Footer Background */
+.homepage-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footerGrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23footerGrid)"/></svg>');
+  opacity: 0.2;
+}
+
+/* Section Title Gradient */
+.section-title {
+  background: linear-gradient(45deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Footer Section Title Underline */
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .building-1, .building-2, .building-3 {
+    width: 60px;
+    height: 200px;
+  }
+  
+  .building-illustration {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .building-tower {
+    font-size: 5rem;
+  }
+}
